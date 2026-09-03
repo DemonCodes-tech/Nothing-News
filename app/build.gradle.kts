@@ -7,6 +7,7 @@ plugins {
   alias(libs.plugins.roborazzi)
   alias(libs.plugins.secrets)
   alias(libs.plugins.google.services)
+  alias(libs.plugins.firebase.crashlytics)
 }
 
 android {
@@ -41,12 +42,23 @@ android {
 
   buildTypes {
     release {
-      isCrunchPngs = false
-      isMinifyEnabled = false
+      isCrunchPngs = true
+      isMinifyEnabled = true
+      isShrinkResources = true
       proguardFiles(getDefaultProguardFile("proguard-android-optimize.txt"), "proguard-rules.pro")
       signingConfig = signingConfigs.getByName("release")
+      buildConfigField("String", "API_ENDPOINT", "\"https://api.nothing.tech/\"")
     }
-    debug { signingConfig = signingConfigs.getByName("debugConfig") }
+    create("staging") {
+      initWith(getByName("debug"))
+      applicationIdSuffix = ".staging"
+      versionNameSuffix = "-staging"
+      buildConfigField("String", "API_ENDPOINT", "\"https://staging.api.nothing.tech/\"")
+    }
+    debug {
+      signingConfig = signingConfigs.getByName("debugConfig")
+      buildConfigField("String", "API_ENDPOINT", "\"https://dev.api.nothing.tech/\"")
+    }
   }
   compileOptions {
     sourceCompatibility = JavaVersion.VERSION_11
@@ -102,6 +114,7 @@ dependencies {
   implementation(libs.coil.compose)
   implementation(libs.converter.moshi)
   implementation(libs.firebase.ai)
+  implementation(libs.firebase.crashlytics)
   // Uncomment to use Firestore:
   // implementation(libs.firebase.firestore)
 
