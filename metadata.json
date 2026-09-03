@@ -1,0 +1,7 @@
+{
+  "name": "Nothing News",
+  "description": "Monochrome, text-based global news and Palestine crisis dispatches with a Nothing OS minimalist aesthetic.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
+
