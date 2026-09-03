@@ -91,4 +91,21 @@ Built for **myself** (but open-source for anyone), this app combines:
 - Gemini API key (free tier available)
 - (Optional) X and Reddit API credentials
 
+personal-intelligence-os/
+├── frontend/               # React/Next.js UI
+│   ├── components/         # Reusable Nothing OS 5.0 components
+│   ├── screens/            # All app screens (Feed, Reader, Settings, etc.)
+│   ├── hooks/              # Custom React hooks
+│   ├── theme/              # Nothing OS 5.0 design system
+│   └── utils/              # Helpers & utilities
+├── backend/                # FastAPI/Node.js server
+│   ├── api/                # All API endpoints
+│   ├── ai/                 # Gemini integration
+│   ├── scrapers/           # X & Reddit data extraction
+│   ├── sync/               # Cross-device sync logic
+│   └── workers/            # Background tasks (cron jobs)
+├── mobile/                 # React Native app (optional)
+├── database/               # SQLite schemas & migrations
+├── tests/                  # Unit & integration tests
+└── docs/                   # Full feature documentation
 
