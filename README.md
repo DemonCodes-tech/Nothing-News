@@ -1,4 +1,4 @@
-# 📰 Personal Intelligence OS
+# 📰 Nothing News
 
 ### *The News App That Thinks With You*
 
@@ -9,11 +9,11 @@
 
 ---
 
-## 🧠 What Is This?
+## 🧠 What Is Nothing News?
 
-**Personal Intelligence OS** is a fully-featured, AI-powered news application that doesn't just show you the news—it helps you understand it, act on it, and grow from it.
+**Nothing News** is a fully-featured, AI-powered news application that doesn't just show you the news—it helps you understand it, act on it, and grow from it.
 
-Built for **myself** (but open-source for anyone), this app combines:
+Built for **personal use** (but open-source for anyone), this app combines:
 
 - **25+ intelligent features** powered by Google's Gemini AI
 - **Nothing OS 5.0 design language** — frosted glass, adaptive colors, spring animations
@@ -87,5 +87,7 @@ Built for **myself** (but open-source for anyone), this app combines:
 ## 🚀 Quick Start
 
 ### Prerequisites
+- Node.js 18+ or Python 3.10+
+- Gemini API key (free tier available)
 - Node.js 18+ or Python 3.10+
 - Gemini API key (free tier available)
